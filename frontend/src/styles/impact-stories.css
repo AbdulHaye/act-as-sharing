@@ -1,0 +1,132 @@
+.impact-stories {
+  background-color: var(--neutral-50);
+}
+
+.story-carousel {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+.story-content {
+  margin-bottom: 2rem;
+}
+
+.story-image-container {
+  position: relative;
+}
+
+.story-image {
+  border-radius: var(--radius-md);
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.story-amount {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+}
+
+.story-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--neutral-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.story-meta {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+.story-name {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.story-details {
+  color: var(--neutral-600);
+  font-size: 0.875rem;
+}
+
+.story-divider {
+  margin: 0 0.5rem;
+}
+
+.story-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-nav-btn {
+  background: none;
+  border: none;
+  color: var(--neutral-600);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.story-nav-btn:hover {
+  color: var(--primary-color);
+}
+
+.story-indicators {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0 1.5rem;
+}
+
+.story-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: var(--neutral-300);
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.story-indicator.active {
+  background-color: var(--primary-color);
+  transform: scale(1.3);
+}
+
+@media (max-width: 991.98px) {
+  .story-carousel {
+    padding: 2rem;
+  }
+  
+  .story-quote {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .story-image {
+    height: 250px;
+  }
+  
+  .story-quote {
+    margin-top: 1.5rem;
+  }
+}

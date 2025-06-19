@@ -1,0 +1,103 @@
+/* Ensure the table and its containers take full width */
+.container-fluid {
+  width: 100%;
+  padding: 0 15px; /* Adjust padding as needed */
+}
+
+.card {
+  width: 100% !important; /* Override any width constraints */
+  margin: 0;
+}
+
+.table-responsive {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+/* Fixed header styling */
+.table-header {
+  background-color: #5144A1;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Scrollable table body */
+.table-body-scrollable {
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+  display: block;
+  width: 100%;
+}
+
+.table-body-scrollable table {
+  width: 100%;
+}
+
+.table-cell {
+  padding: 12px 20px;
+  color: #1F2937;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Specific widths for columns to ensure alignment */
+.table-custom th, .table-custom td {
+  width: auto;
+}
+
+/* Column widths for Contributions table */
+.table-custom th:nth-child(1), .table-custom td:nth-child(1) { width: 5%; } /* ID */
+.table-custom th:nth-child(2), .table-custom td:nth-child(2) { width: 20%; } /* Event Title */
+.table-custom th:nth-child(3), .table-custom td:nth-child(3) { width: 15%; } /* User Name */
+.table-custom th:nth-child(4), .table-custom td:nth-child(4) { width: 20%; } /* Email */
+.table-custom th:nth-child(5), .table-custom td:nth-child(5) { width: 10%; } /* Amount */
+.table-custom th:nth-child(6), .table-custom td:nth-child(6) { width: 10%; } /* Status */
+.table-custom th:nth-child(7), .table-custom td:nth-child(7) { width: 20%; } /* Actions */
+
+/* Style for the Actions column to align buttons horizontally */
+.actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between buttons */
+  padding: 12px 20px;
+}
+
+.action-btn {
+  margin: 0 !important; /* Override any default margins */
+  padding: 5px 10px; /* Adjust button padding for better fit */
+  font-size: 14px; /* Ensure text is readable */
+}
+
+/* Scrollbar styling for better aesthetics */
+.table-body-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-body-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-body-scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-body-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.table-cell {
+  padding: 12px 20px;
+  color: #1F2937;
+  border-bottom: 1px solid #dee2e6;
+}

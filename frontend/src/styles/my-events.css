@@ -1,0 +1,21 @@
+/* Basic styles for MyEventsPage */
+.max-width-300 {
+    max-width: 300px;
+  }
+  
+  .card-img-top {
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+  }
+  
+  .progress {
+    height: 8px;
+  }

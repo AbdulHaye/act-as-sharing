@@ -1,0 +1,28 @@
+{
+    "name": "commonchange-backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "seed:tenants": "node seeders/tenantSeeder.js"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "form-data": "^4.0.2",
+        "jsonwebtoken": "^8.5.1",
+        "mailgun.js": "^12.0.1",
+        "mongoose": "^6.0.0",
+        "multer": "^1.4.5-lts.2",
+        "node-cron": "^3.0.3",
+        "nodemailer": "^6.10.1",
+        "socket.io": "^4.8.1",
+        "stripe": "^18.1.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}

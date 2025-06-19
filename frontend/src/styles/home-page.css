@@ -1,0 +1,292 @@
+/* Add these new styles to your existing CSS */
+
+:root {
+  --primary-purple: #6c4aa0;
+  --primary-purple-hover: #5a3d87;
+  --form-transition: all 0.3s ease;
+  --form-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --form-border-radius: 8px;
+}
+
+.cta-section {
+  background-color: white;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  color: white;
+}
+
+.cta-title {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.cta-text {
+  font-size: 1.125rem;
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+.featured-events {
+  background-color: white;
+}
+
+@media (max-width: 991.98px) {
+  .cta-card {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+/* Request Assistance Button Styles */
+.btn-request-assistance {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--form-border-radius);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--form-transition);
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-request-assistance:hover {
+  background-color: var(--primary-purple-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Form Section Styles */
+.assistance-form-section {
+  margin-top: 2rem;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: var(--form-border-radius);
+  box-shadow: var(--form-shadow);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+  max-width: 80%; /* Keep the existing max-width */
+  margin-left: auto; /* Add this to center */
+  margin-right: auto; /* Add this to center */
+  display: flex; /* Add flex to help with internal alignment */
+  flex-direction: column; /* Keep the form elements in a column */
+  /* align-items: center; Center the form content horizontally */
+}
+
+.assistance-form-section.form-visible {
+  max-height: 2000px; /* Large enough to contain the form */
+  opacity: 1;
+  margin-top: 2rem;
+  padding: 2.5rem;
+  max-width: 80%; /* Keep the existing max-width */
+  margin-left: auto; /* Add this to center */
+  margin-right: auto; /* Add this to center */
+}
+
+.form-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.assistance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Floating Label Input Styles */
+.form-floating {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  background-color: transparent;
+  transition: var(--form-transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 1px 0 0 var(--primary-purple);
+}
+
+.form-floating label {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  transition: var(--form-transition);
+}
+
+.form-floating label.active,
+.form-control:focus ~ label {
+  top: -10px;
+  left: 0;
+  font-size: 12px;
+  color: var(--primary-purple);
+  background-color: transparent;
+}
+
+.form-control.has-value {
+  border-color: var(--primary-purple);
+}
+
+/* Select Styles */
+.form-select-container {
+  margin-bottom: 20px;
+}
+
+.form-select-container label {
+  display: block;
+  font-size: 12px;
+  color: var(--primary-purple);
+  margin-bottom: 8px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  background-color: transparent;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236c4aa0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: var(--form-transition);
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 1px 0 0 var(--primary-purple);
+}
+
+/* Textarea Styles */
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button Styles */
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.btn-submit {
+  background-color: var(--primary-purple);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: var(--form-border-radius);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--form-transition);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-purple-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Pagination Styles */
+.pagination .page-link {
+  color: var(--primary-purple); /* Purple text for pagination links */
+  background-color: #fff; /* White background for inactive buttons */
+  border: 1px solid #dee2e6; /* Default Bootstrap border */
+}
+
+.pagination .page-link:hover {
+  color: var(--primary-purple-hover); /* Darker purple on hover */
+  background-color: #e9ecef; /* Light gray background on hover */
+  border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-purple); /* Purple background for active button */
+  border-color: var(--primary-purple); /* Purple border for active button */
+  color: #fff; /* White text for active button */
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d; /* Gray for disabled buttons */
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .assistance-form-section {
+    padding: 1.5rem;
+  }
+
+  .assistance-form-section.form-visible {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 20px;
+  }
+
+  .form-subtitle {
+    font-size: 13px;
+  }
+
+  .form-group h3 {
+    font-size: 16px;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 14px;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}

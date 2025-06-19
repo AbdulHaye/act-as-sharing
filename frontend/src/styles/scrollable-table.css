@@ -1,0 +1,71 @@
+.table-responsive {
+  position: relative;
+}
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.table-header {
+  background-color: #5144A1;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-body-scrollable {
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+  display: block;
+  width: 100%;
+}
+
+.table-body-scrollable table {
+  width: 100%;
+}
+
+.table-cell {
+  padding: 12px 20px;
+  color: #1F2937;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Ensure column widths are consistent */
+.table-custom th, .table-custom td {
+  width: auto;
+}
+
+/* Specific widths for columns to ensure alignment */
+.table-custom th:nth-child(1), .table-custom td:nth-child(1) { width: 5%; } /* ID */
+.table-custom th:nth-child(2), .table-custom td:nth-child(2) { width: 15%; } /* Full Name */
+.table-custom th:nth-child(3), .table-custom td:nth-child(3) { width: 10%; } /* Phone */
+.table-custom th:nth-child(4), .table-custom td:nth-child(4) { width: 15%; } /* Email */
+.table-custom th:nth-child(5), .table-custom td:nth-child(5) { width: 15%; } /* Person Name */
+.table-custom th:nth-child(6), .table-custom td:nth-child(6) { width: 10%; } /* Relationship */
+.table-custom th:nth-child(7), .table-custom td:nth-child(7) { width: 10%; } /* Immediate Need */
+.table-custom th:nth-child(8), .table-custom td:nth-child(8) { width: 10%; } /* Date */
+.table-custom th:nth-child(9), .table-custom td:nth-child(9) { width: 15%; } /* Additional Info */
+.table-custom th:nth-child(10), .table-custom td:nth-child(10) { min-width: 120px; } /* Actions (for admin) */
+
+/* Scrollbar styling for better aesthetics */
+.table-body-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-body-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-body-scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-body-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

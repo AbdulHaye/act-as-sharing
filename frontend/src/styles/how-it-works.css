@@ -1,0 +1,74 @@
+.how-it-works {
+  background-color: white;
+  position: relative;
+}
+
+.step-card {
+  background-color: var(--neutral-50);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.step-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(26, 95, 122, 0.1);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.step-title {
+  font-size: 1.375rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.step-description {
+  color: var(--neutral-600);
+  margin-bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .step-card {
+    padding: 2rem 1.25rem;
+  }
+  
+  .step-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .step-title {
+    font-size: 1.25rem;
+  }
+}

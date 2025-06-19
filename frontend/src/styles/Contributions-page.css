@@ -1,0 +1,98 @@
+/* Ensure the table and its containers take full width */
+.container-fluid {
+  width: 100%;
+  padding: 0 15px; /* Keep padding as needed */
+}
+
+.card {
+  width: 100% !important; /* Override any width constraints */
+  margin: 0;
+}
+
+.table-responsive {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+  table-layout: auto; /* Allow columns to adjust based on content */
+}
+
+/* Fixed header styling */
+.table-header {
+  background-color: #5144A1;
+  color: #FFFFFF;
+  padding: 12px 20px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Scrollable table body */
+.table-body-scrollable {
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+  display: block;
+  width: 100%;
+}
+
+.table-body-scrollable table {
+  width: 100%;
+}
+
+.table-cell {
+  padding: 12px 20px;
+  color: #1F2937;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Remove fixed widths for columns and let them adjust dynamically */
+.table-custom th,
+.table-custom td {
+  width: auto; /* Remove fixed widths */
+  white-space: nowrap; /* Prevent text wrapping if needed */
+}
+
+/* Optional: Ensure the last column fills remaining space if actions are present */
+.table-custom td:last-child,
+.table-custom th:last-child {
+  width: 1%; /* Minimum width, will expand to fill */
+  white-space: nowrap;
+}
+
+/* Style for the Actions column to align buttons horizontally */
+.actions-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+}
+
+.action-btn {
+  margin: 0 !important;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Scrollbar styling for better aesthetics */
+.table-body-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-body-scrollable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-body-scrollable::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.table-body-scrollable::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

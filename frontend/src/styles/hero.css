@@ -1,0 +1,125 @@
+.hero {
+  background-color: var(--neutral-50);
+  padding: 7rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-right: 2rem;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.8s ease-out, slideUp 0.8s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--neutral-600);
+  margin-bottom: 2rem;
+  max-width: 540px;
+  animation: fadeIn 1s ease-out 0.2s both, slideUp 1s ease-out 0.2s both;
+}
+
+.hero-buttons {
+  margin-bottom: 2.5rem;
+  animation: fadeIn 1.2s ease-out 0.4s both;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  animation: fadeIn 1.4s ease-out 0.6s both;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat-number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.hero-stat-label {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+}
+
+.hero-image-container {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1.5s ease-out 0.5s both;
+}
+
+.hero-image {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: all 0.5s ease;
+}
+
+.hero-image:hover {
+  transform: perspective(1000px) rotateY(0) rotateX(0);
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 7rem 0 4rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    transform: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}

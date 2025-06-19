@@ -1,0 +1,145 @@
+/* src/components/admin/AdminDashboard.module.css */
+.dashboardContainer {
+  width: 100%;
+  padding: 0;
+}
+
+.statsRow {
+  /* No additional styles needed, relying on Bootstrap grid */
+}
+
+.statCard {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.statHeader {
+  margin-bottom: 0.5rem;
+}
+
+.statIcon {
+  flex-shrink: 0;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.statTitle {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.tablesRow {
+  /* No additional styles needed, relying on Bootstrap grid */
+}
+
+.tableResponsiveWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tableCustom {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader {
+  color: white;
+  padding: 12px 8px;
+  font-size: 0.9rem;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.tableCell {
+  padding: 12px 8px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #dee2e6;
+  color: #333;
+}
+
+.eventsTable,
+.usersTable {
+  /* Specific table styles can be added here if needed */
+}
+
+.badge {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+
+.paginationContainer {
+  background-color: #fff;
+  border-top: 1px solid #dee2e6;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loadingState,
+.emptyState {
+  /* No specific styles needed, relying on Bootstrap classes */
+}
+
+/* Medium screens (≤767px) */
+@media (max-width: 767px) {
+  .statValue {
+    font-size: 1.5rem;
+  }
+
+  .statTitle {
+    font-size: 0.9rem;
+  }
+
+  .tableHeader,
+  .tableCell {
+    font-size: 0.8rem;
+    padding: 8px 4px;
+    min-width: 100px;
+  }
+
+  .card-header h5 {
+    font-size: 1.1rem;
+  }
+
+  .paginationContainer .page-link {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small screens (≤576px) */
+@media (max-width: 576px) {
+  .statCard {
+    min-height: 100px;
+  }
+
+  .statValue {
+    font-size: 1.25rem;
+  }
+
+  .statTitle {
+    font-size: 0.85rem;
+  }
+
+  .tableHeader,
+  .tableCell {
+    min-width: 80px;
+  }
+
+  .paginationContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .paginationContainer nav {
+    margin-top: 0.5rem;
+  }
+}
